@@ -27,7 +27,6 @@ Feature: To test Inventory API
   Scenario: To add new ID in inventory
     Given path 'inventory/add'
     * def body = read("../NewIdEntry.json")
-    #And request {"id": "102","name": "Hawaiian","image": "hawaiian.png","price": "$14"}
     And request body
     And headers {Accept : 'application/json', Content-Type : 'application/json'}
     When method post
